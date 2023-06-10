@@ -1,6 +1,7 @@
-R1 Rajawali
-R2 Purabaya
-R7 Bound for PTC & Lenmarc (Jono Soewojo)
+route_name,frekuensi, jam_operas
+R1 Rajawali,11, 05:30 - 20:56
+R2 Purabaya,11, 05:30 - 20:56
+R7 Bound for PTC & Lenmarc (Jono Soewojo),34,5:57 - 20.41
 R8 Bound for Joyoboyo
 TB-II Bound for ITS/Kejawan Putih
 TB-II Bound for SPBU Lidah Wetan
