@@ -12,7 +12,7 @@ import pandas
 def get_scrap_data_angkot(URL):
     options = Options()
    
-    options.add_argument("--headless")
+    ##options.add_argument("--headless")
 
     driver = webdriver.Edge(options=options)
     
@@ -23,14 +23,13 @@ def get_scrap_data_angkot(URL):
         links = []
        
         for angkot in angkot_route:
-            data = angkot.find_element(By.TAG_NAME, "a").get_attribute("href")
-            print(data)
-            links.append([data])
+            data = angkot.find_element(By.TAG_NAME, "a")
+            name = data.find_element(By.TAG_NAME, "span").text + " " +data.find_element(By.TAG_NAME, "strong").text 
+            links.append([name])
         
-
-            with open("link.csv", "w", newline="") as f:
+            with open("route_name.csv", "w", newline="") as f:
                 writer = csv.writer(f)
-                writer.writerows(data)
+                writer.writerows(links)
             
 
 
